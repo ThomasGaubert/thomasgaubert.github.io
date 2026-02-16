@@ -1,133 +1,31 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Software engineer at Microsoft" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thomas Gaubert — Senior Software Engineer">
   <meta name="google-site-verification" content="Y-iHNjTV9nRYkLNR6wzmsoKuqVngH78X9P6eTDYE-jA" />
   <meta name="cf-2fa-verify" content="381f2afc54cdfa1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/x-icon" href="res/img/favicon.ico">
-
   <title>Thomas Gaubert</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83279448-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-83279448-2');
-  </script>
-
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Sanchez:400,400i|Righteous|Lobster" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-  <link href="res/css/global.css" rel="stylesheet">
-  <link href="res/css/index.css" rel="stylesheet">
+  <link href="res/css/main.css" rel="stylesheet">
 </head>
 <body>
+  <canvas id="wave-canvas"></canvas>
 
-  <div class="links">
-    <ul>
-      <li><a href="resume.pdf" target="_blank"><i class="far fa-file-alt grow"></i></a></li>
-      <li><a href="https://github.com/ThomasGaubert" target="_blank"><i class="fab fa-github"></i></a></li>
-      <li><a href="https://twitter.com/ThomasGaubert" target="_blank"><i class="fab fa-twitter"></i></a></li>
-      <li><a href="https://instagram.com/ThomasGaubert" target="_blank"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="https://linkedin.com/in/tpgaubert" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-    </ul>
-  </div>
-
-  <section class="hero">
-    <section class="bio">
-      <h1 class="name">Thomas Gaubert</h1>
-      <span class="tagline">Software Engineer @ Microsoft</span>
-      <div class="links-mobile">
-        <a href="resume.pdf" target="_blank"><i class="far fa-file-alt grow"></i></a>
-        <a href="https://github.com/ThomasGaubert" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://twitter.com/ThomasGaubert" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com/ThomasGaubert" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/tpgaubert" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-    </section>
-  </section>
-
-  <div class="blocks-container">
-    <section class="block grow">
-      <a href="https://products.office.com/en-us/microsoft-teams/group-chat-software" target="_blank">
-        <div class="block-container block-ms">
-          <img class="icon" src="res/img/ms-teams.png" data-aos="fade-up"/>
-          <div class="block-caption">
-            <h2>Microsoft Teams</h2>
-            <span class="block-tagline">The hub for teamwork in Office 365</span>
-          </div>
-        </div>
-      </a>
-    </section>
-
-    <div class="block-half-container">
-      <section class="block block-half grow">
-        <a href="https://yelp.com" target="_blank">
-          <div class="block-container block-yelp half-left">
-            <img class="icon" src="res/img/yelp.png" data-aos="fade-up"/>
-            <div class="block-caption">
-              <h2>Yelp</h2>
-              <span class="block-tagline">'16 Intern - Core Android</span>
-            </div>
-          </div>
-        </a>
-      </section>
-
-      <section class="block block-half grow">
-        <a href="https://hacktx.com" target="_blank">
-          <div class="block-container block-hacktx half-right">
-            <img class="icon" src="res/img/hacktx.png" data-aos="fade-up"/>
-            <div class="block-caption">
-              <h2>HackTX</h2>
-              <span class="block-tagline">The UT Austin hackathon</span>
-            </div>
-          </div>
-        </a>
-      </section>
+  <div class="content">
+    <h1>Thomas Gaubert</h1>
+    <div class="links">
+      <a href="resume.pdf" target="_blank" title="Resume" aria-label="Resume"><i class="far fa-file-alt"></i></a>
+      <a href="https://github.com/ThomasGaubert" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com/ThomasGaubert" target="_blank" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/ThomasGaubert" target="_blank" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/in/tpgaubert" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
-
-    <section class="block grow">
-      <a href="https://gaubert.io/zephyr/">
-        <div class="block-container block-zephyr">
-          <img class="icon" src="res/img/zephyr.png" data-aos="fade-up"/>
-          <div class="block-caption">
-            <h2>Zephyr</h2>
-            <span class="block-tagline">Android notifications mirrored to VR</span>
-          </div>
-        </div>
-      </a>
-    </section>
-
-    <section class="block grow">
-      <a href="tockle.html">
-        <div class="block-container block-tockle">
-          <img class="icon" src="res/img/tockle.png" data-aos="fade-up"/>
-          <div class="block-caption">
-            <h2>Tockle</h2>
-            <span class="block-tagline">Control your phone from Android Wear</span>
-          </div>
-        </div>
-      </a>
-    </section>
   </div>
 
-  <section class="footer">
-    &copy; 2018 Thomas Gaubert
-  </section>
-  
+  <script src="res/scripts/waves.js"></script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    once: true
-  });
-</script>
 </html>
