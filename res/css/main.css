@@ -48,6 +48,7 @@ body {
 }
 
 .links a {
+  position: relative;
   color: #A8C5A0;
   text-decoration: none;
   font-weight: 400;
@@ -57,6 +58,28 @@ body {
   padding: 0.3em;
   border-bottom: none;
   transition: color 0.3s;
+}
+
+.links a::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  font-size: 0.7rem;
+  color: #E8F0E4;
+  background: rgba(11, 31, 20, 0.85);
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.links a:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .links a:hover {
